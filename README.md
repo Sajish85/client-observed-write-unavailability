@@ -45,7 +45,7 @@ Re-running the measurements needs the software versions listed in Table 1 of the
 
 ## Links
 
-- DOI: to be added at deposit
+- DOI: [10.5281/zenodo.24359724](https://doi.org/10.5281/zenodo.24359724)
 
 ## Licence
 
