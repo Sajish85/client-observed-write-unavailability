@@ -1,26 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Client-Observed Write Unavailability After a Primary Process Kill: Five Replicated Database Systems at Shipped Settings on a Single Host"
-type: dataset
 authors:
-  - family-names: Krishnan
-    given-names: Sajish
+  - family-names: "Krishnan"
+    given-names: "Sajish"
     orcid: "https://orcid.org/0009-0009-7561-9290"
-abstract: "Client-side measurements of write unavailability after a primary process kill in five replicated database systems at shipped settings, with per-system failure-detection decomposition and acknowledged-write loss accounting."
-keywords:
-  - database failover
-  - high availability
-  - Patroni
-  - PostgreSQL
-  - MongoDB
-  - MySQL Group Replication
-  - Redis Sentinel
-  - CockroachDB
-  - failure detection
-  - client recovery time
-  - replication
-  - chaos engineering
+    affiliation: "Independent researcher"
+title: "Client-Observed Write Unavailability After a Primary Process Kill"
+date-released: 2026-11-18
+year: 2026
+doi: "10.5281/zenodo.24359724"
+url: "https://github.com/Sajish85/client-observed-write-unavailability"
 license: CC-BY-4.0
-# doi: to be added at deposit
-
-doi: 10.5281/zenodo.24359724

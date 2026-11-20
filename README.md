@@ -51,3 +51,17 @@ Re-running the measurements needs the software versions listed in Table 1 of the
 
 - Paper (`paper.md`) and lab notes (`lab-notes/`): CC-BY-4.0, https://creativecommons.org/licenses/by/4.0/.
 - Data (`data/`) and any code: MIT, see [LICENSE](LICENSE). This repo contains no code yet.
+
+## How to cite
+
+```bibtex
+@misc{krishnan2026writeunavailability,
+  author       = {Krishnan, Sajish},
+  title        = {Client-Observed Write Unavailability After a Primary Process Kill},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24359724},
+  url          = {https://github.com/Sajish85/client-observed-write-unavailability},
+  note         = {ORCID: 0009-0009-7561-9290. Licence: CC BY 4.0}
+}
+```
