@@ -3,7 +3,7 @@
 **Sajish Krishnan**
 Independent researcher
 
-*Internal draft v3, 18 November 2026. Not for circulation.*
+*Preprint — v2, 21 November 2026. First published 18 November 2026. This version removes a draft header and an internal review note left in v1, renders the method diagram that v1 printed as raw code, and adds an artefact availability section. No data, results or claims are changed.*
 
 ---
 
@@ -32,27 +32,7 @@ The systems are not ranked. The failure unit, the client path, and the meaning o
 
 ### 2.1 Overview
 
-```mermaid
-flowchart LR
-  subgraph client["client side (same machine, one clock)"]
-    W["writer probe<br/>one connection, unique IDs,<br/>one write per attempt"]
-    LOG[("attempt log<br/>id, start, end, outcome")]
-    H["harness<br/>health gate, kill -9, restart"]
-    R["reconciliation<br/>every ID vs surviving data"]
-  end
-  subgraph cluster["3-node cluster on loopback"]
-    P["primary"]
-    S1["secondary"]
-    S2["secondary"]
-    P -- replication --> S1
-    P -- replication --> S2
-  end
-  W -- writes --> P
-  W --> LOG
-  H -. "kill -9" .-> P
-  LOG --> R
-  R -- "read all IDs after settle" --> S1
-```
+![Figure 1. Method overview: the writer probe, harness and reconciliation around a three-node cluster.](figure1.png)
 
 Following the arrows: the harness waits until the cluster passes a health gate, the writer probe sends uniquely identified single-row writes to the current primary and logs every attempt with start time, end time and outcome. The harness kills the primary process. The probe keeps trying. After the measurement window the harness restarts the killed node, waits for the health gate again, and reads the surviving data back from the new primary. Every ID in the attempt log is then classified against that data. The diagram shows the general shape; per-system differences in how the client finds the primary are listed in Table 1.
 
@@ -284,9 +264,11 @@ No acknowledged write was lost in the MongoDB, MySQL, Redis or CockroachDB cells
 
 These are loopback, process-kill results. The next steps that would most change what can be claimed are a second host with a real network, a fault that can produce loss in each system reported with its at-risk denominator, and one changed timing setting per system to test whether the outage follows it.
 
-## References
+## Artefact availability
 
-Internal note: [1], [2] and [4]–[9] were checked against the live sources on 18 November 2026. [3] and the author list of [10] were verified in a separate read during internal review and not re-read for this draft; a direct fetch of [3] on 18 November 2026 returned HTTP 403. Access dates remain to be completed before any circulation.
+The per-cell results data, lab notes and the source of this paper are available at https://github.com/Sajish85/client-observed-write-unavailability and archived on Zenodo under concept DOI 10.5281/zenodo.24359723 (cite the DOI of the specific version you read).
+
+## References
 
 [1] Patroni contributors. "Dynamic Configuration Settings." Patroni documentation. https://patroni.readthedocs.io/en/latest/dynamic_configuration.html
 
