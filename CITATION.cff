@@ -8,6 +8,6 @@ authors:
 title: "Client-Observed Write Unavailability After a Primary Process Kill"
 date-released: 2026-11-18
 year: 2026
-doi: "10.5281/zenodo.24359724"
+doi: "10.5281/zenodo.24359723"
 url: "https://github.com/Sajish85/client-observed-write-unavailability"
 license: CC-BY-4.0

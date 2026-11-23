@@ -45,7 +45,7 @@ Re-running the measurements needs the software versions listed in Table 1 of the
 
 ## Links
 
-- DOI: [10.5281/zenodo.24359724](https://doi.org/10.5281/zenodo.24359724)
+- DOI: [10.5281/zenodo.24359723](https://doi.org/10.5281/zenodo.24359723)
 
 ## Licence
 
@@ -60,7 +60,7 @@ Re-running the measurements needs the software versions listed in Table 1 of the
   title        = {Client-Observed Write Unavailability After a Primary Process Kill},
   year         = {2026},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.24359724},
+  doi          = {10.5281/zenodo.24359723},
   url          = {https://github.com/Sajish85/client-observed-write-unavailability},
   note         = {ORCID: 0009-0009-7561-9290. Licence: CC BY 4.0}
 }
